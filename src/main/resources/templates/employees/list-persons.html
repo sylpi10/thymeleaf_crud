@@ -20,10 +20,10 @@
         <table class="table table-hover table-striped">
             <thead class="thead-dark">
                 <tr>
-                    <th>first name</th>
-                    <th>last name</th>
-                    <th>email</th>
-                    <th>action</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,7 +31,7 @@
                     <td th:text="${person.firstName}"/>
                     <td th:text="${person.lastName}"/>
                     <td th:text="${person.email}"/>
-                    <td><a th:href="">Update</a> </td>
+                    <td><a th:href="@{/employees/showUpdateForm(employeeId=${person.id})}"  class="btn btn-info">Update</a> </td>
                 </tr>
             </tbody>
         </table>
