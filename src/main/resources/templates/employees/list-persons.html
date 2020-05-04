@@ -1,0 +1,41 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>thymeleaf list persons</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Persons</h1>
+
+        <hr>
+
+        <a th:href="@{/employees/showAddForm}" class="btn btn-info mb-3">Add Person</a>
+
+        <table class="table table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>first name</th>
+                    <th>last name</th>
+                    <th>email</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="person : ${employees}">
+                    <td th:text="${person.firstName}"/>
+                    <td th:text="${person.lastName}"/>
+                    <td th:text="${person.email}"/>
+                    <td><a th:href="">Update</a> </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

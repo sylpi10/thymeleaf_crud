@@ -1,0 +1,12 @@
+body{
+    background-color: #ccc;
+}
+.container{
+    width: 74%;
+    margin:auto;
+    background-color: lightblue;
+}
+p{
+    text-align: center;
+    font-size: 2rem;
+}
